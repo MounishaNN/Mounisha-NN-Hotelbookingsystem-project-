@@ -1,0 +1,24 @@
+<hibernate-configuration>
+<session-factory>
+<!--   JDBC Database connection settings   -->
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/HBSproject</property>
+<property name="connection.username">root</property>
+<property name="connection.password">Mouni@41</property>
+<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<!--   Echo the SQL to stdout   -->
+<property name="show_sql">true</property>
+<!--   Drop and re-create the database schema on startup (Use "update" in production)   -->
+<property name="hbm2ddl.auto">create</property>
+<property name="format_sql">true</property>
+<!--   Entity mapping   -->
+<mapping class="com.hotel.entities.Admin"/>
+<mapping class="com.hotel.entities.Booking"/>
+<mapping class="com.hotel.entities.Customer"/>
+<mapping class="com.hotel.entities.Login"/>
+<mapping class="com.hotel.entities.Payment"/>
+<mapping class="com.hotel.entities.Room"/>
+<mapping class="com.hotel.entities.Registration"/>
+
+</session-factory>
+</hibernate-configuration>
